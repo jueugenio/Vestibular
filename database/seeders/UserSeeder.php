@@ -14,14 +14,12 @@ class UserSeeder extends Seeder
      */
     public function run(User $user)
     {
-        $user->create([
-              'name'=>'AdminPrincipal',
-               'email'=>'admin@vestibularStudio.com',
-                 'password'=>'123456789',
-             
+    
+          $user->create([
+            'name'=>'admin',
+               'email'=>'administrador@hotmail.com',
+                'password'=>'123456789'
 
         ]);
-       
-        }
     }
-
+}

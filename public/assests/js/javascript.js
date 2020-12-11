@@ -5,9 +5,9 @@
     function confirmDel(event){
         event.preventDefault();
         let token=doc.getElementsByName("_token")[0].value;
-        if(confirm("Deseja deletar este item?")){
+        if(confirm("Você tem certeza que deseja excluir este item?")){
         let ajax=new XMLHttpRequest();
-        ajax.open("Excluir", event.target.parentNode.href);
+        ajax.open("DELETE", event.target.parentNode.href);
         ajax.setRequestHeader('X-CSRF-TOKEN',token);
         ajax.onreadystatechange=function(){
             if(ajax.readyState === 4 && ajax.status === 200){

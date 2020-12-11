@@ -2,12 +2,11 @@
 @extends('layouts.app')
 @section('content')
 <h1 class="text-center"><b>Vestibulares</b></h1><hr>
-<div class="col-8 m-auto">
+<div class="col-8 m-auto"> 
+  <a href= "{{url("../home")}}" class="btn text-white btn-dark ">Voltar </a>
+    <a href= "{{url("../user")}}" class="btn text-white btn-dark ">Administradores </a>
 	
-	 <a href="{{url('perfils')}}">
-    <button class="btn btn-dark">Administradores</button>
-  </a>
-		
+
 		<a href="{{url('adm/create')}}">
 		<button class="btn btn-dark">Criar</button>
 	</a>
@@ -21,10 +20,10 @@
       <th scope="col">#</th>
       <th scope="col">Instituição</th>
       <th scope="col">Site</th>
-      <th scope="col">Ano</th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
+       <th scope="col"></th>
 
  
   
@@ -50,11 +49,12 @@
 	</a>
 </td>
 <td>
- <a class="js-del" href="{{url("adm/$vests->id")}}" >
+ <a class="js-del" href="{{url("adm/$vests->id")}}">
 		<button class="btn btn-dark">Deletar</button>
 	</a>
-	 </tr>
+
 	</td>
+	 </tr>
 @endforeach
 </tbody>
 </table>

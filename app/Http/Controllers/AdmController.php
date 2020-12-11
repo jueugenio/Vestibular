@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ModelVestibular;
+use Illuminate\Support\Facades\Auth;
 
 class AdmController extends Controller
 {
@@ -22,10 +23,12 @@ class AdmController extends Controller
    
     public function index()
     {
+       
         $vest=$this->objVest->all();
         return view('adm.index', compact('vest'));
     }
 
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -131,8 +134,23 @@ class AdmController extends Controller
      */
     public function destroy($id)
     {
-        
         $del =$this->objVest->destroy($id);
         return($id)?"Sim":"Não";
+    }
+     public function showLoginForm(){
+        return view('auth.login');
+    }
+
+    public function login(Request $request){
+
+      
+      $credentials = [
+        'email' => $request-> email,
+        'password' => $request-> password
+
+      ];
+      if(Auth::attempt($credentials)){
+        return redirect()->route('adm.index');
+      }
     }
 }

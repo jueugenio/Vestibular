@@ -1,23 +1,75 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-center">Vestibular</h1><hr>
-<b>ID:</b>{{$adm->id}}<br>
-<b>Instituição</b> {{$adm->inst}}<br>
-<b>site:</b> {{$adm->site}}<br><br>
-<b>Matemática:</b> {{$adm->mat}}<br><br>
-<b>Gramática:</b> {{$adm->gram}}<br><br>
-<b>Literatura</b>: {{$adm->lit}}<br><br>
-<b>Texto:</b> {{$adm->texto}}<br><br>
-<b>Inglês:</b> {{$adm->ing}}<br><br>
-<b>Física:</b> {{$adm->fis}}<br><br>
-<b>Química:</b> {{$adm->quim}}<br><br>
-<b>História:</b> {{$adm->hist}}<br><br>
-<b>Geografia:</b> {{$adm->geo}}<br><br>
-<b>Sociologia</b> {{$adm->socio}}<br>
+<div class="text-center">
+<a href= "{{url("../adm")}}" class="btn text-white btn-dark ">Voltar </a>
 
-<div class="col-8 m-auto">
+
+<br>
+<table class="table table-primary">
+<tr>
+       <th scope="col">Identificador</th>
+       <td>{{$adm->id}}</td>
+  </tr>
+  <tr>
+       <th scope="col">Instituição</th>
+       <td>{{$adm->inst}}</td>
+  </tr>
+   <tr>
+       <th scope="col">Site Oficial</th>
+       <td>{{$adm->site}}</td>
+  </tr>
+</table>
+	<br>
 	
+	<tr>
+<table class="table table-warning table-bordered">
+       <th scope="col">Matéria</th>
+       <td><b>Conteúdo</b></td>
+   </tr>
+   <tr>
+       <th scope="col">Matemática:</th>
+       <td> {{$adm->mat}}</td>
+   </tr>
+   <tr>
+       <th>Gramática:</th>
+       <td> {{$adm->gram}}</td>
+   </tr>
+   <tr>
+       <th>Literatura:</th>
+       <td> {{$adm->lit}}</td>
+   </tr>
+    <tr>
+       <th>Texto:</th>
+       <td> {{$adm->texto}}</td>
+   </tr>
+    <tr>
+       <th>Inglês:</th>
+       <td> {{$adm->ing}}</td>
+   </tr>
+    <tr>
+       <th>Física:</th>
+       <td> {{$adm->fis}}</td>
+   </tr>
+    <tr>
+       <th>Química:</th>
+       <td> {{$adm->quim}}</td>
+   </tr>
+    <tr>
+       <th>História:</th>
+       <td> {{$adm->hist}}</td>
+   </tr>
+    <tr>
+       <th>Geografia:</th>
+       <td> {{$adm->geo}}</td>
+   </tr>
+    <tr>
+       <th>Sociologia:</th>
+       <td> {{$adm->socio}}</td>
+   </tr>
 
 
+</table>
 
+
+	
 @endsection
