@@ -59,3 +59,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Sobre o projeto
+
+A aplicação tem o intuito de mostrar somente a página principal e a de visualização das informações de alguns vestibulares.
+Entretanto, apresentamos dificuldade para que o sistema login reconheça dados inseridos diretamente no phpmyadmin (pelo menos o primeiro adm, para assim liberar o cadastro dos demais)
+Portanto, deixamos todas as views abertas, sem nível de acesso para que o professor consiga visualizar as funcionalidades presentes e avaliar o crud.
+
+O usuário não apresenta crud completo pois achamos que seria falta de segurança liberar a edição e a exclusão de qualquer adm.
+
+Tentamos utilizar a função 'Seeder' para cadastrar dados automáticos no banco de dados, mas o sistema login continuou não reconhecendo, só reconhece cadastros realizados na view 'register'.
